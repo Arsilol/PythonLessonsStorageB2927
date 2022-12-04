@@ -29,7 +29,7 @@ class Girlfriend:
 		if self.alive == False:
 			print("******You have no girlfriend!")
 	def ask_progress(self):
-		if human.progress < 0:
+		if human.progress < -10:
 			print("****You are very unsuccessfull!")
 			self.alive = False
 	def spend_time(self):
@@ -47,9 +47,9 @@ class Student:
 		self.gladness = 50
 		self.progress = 0
 		self.alive = True
-		self.money = 0
+		self.money = 50
 	def ask_budget(self):
-		if self.progress >= 50:
+		if self.progress >= 30:
 			univer.budget = True
 	def say_hello(self):
 		print('Hello!')
@@ -67,9 +67,8 @@ class Student:
 	def to_chill(self):
 		print('Chill time')
 		self.gladness += 15
-		self.progress -= 5
-		if univer.budget == True:            
-			self.money -= 20
+		self.progress -= 5            
+		self.money -= 10
 	def is_alive(self):
 		if self.progress < -5:
 			print('You are bad student')
@@ -110,7 +109,7 @@ class Student:
 		girlfriend.ask_satisfaction()
 		girlfriend.ask_money()
 		girlfriend.ask_progress()
-		girlfriend.spend_time()
+		# girlfriend.spend_time()
 		self.statistics()
 		self.is_alive()
 
