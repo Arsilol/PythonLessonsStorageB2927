@@ -124,92 +124,157 @@
 # 	human.live(day)
 
 
-class Human:
-	def __init__(self, name):
-		self.name = name
-		self.appearance = 5
-		self.status = False
-	def live(self):
-		print(self.name, 'is alive')
-	def eat(self):
-		print('Eating time')
+# class Human:
+# 	def __init__(self, name):
+# 		self.name = name
+# 		self.appearance = 5
+# 		self.status = False
+# 	def live(self):
+# 		print(self.name, 'is alive')
+# 	def eat(self):
+# 		print('Eating time')
 
-class Woman(Human):
-	def live(self):
-		super().live()
-		print('What a wonderful day of', self.name)
-	def cook(self):
-		print(self.name, 'is cooking')
+# class Woman(Human):
+# 	def live(self):
+# 		super().live()
+# 		print('What a wonderful day of', self.name)
+# 	def cook(self):
+# 		print(self.name, 'is cooking')
 		
-class Man(Human):
-	def __init__(self, name):
-		super().__init__(name)
-		self.money = 50
-	def work(self):
-		self.money += 10
-		print(self.name, 'is working')
-		print('Money: ', self.money)
+# class Man(Human):
+# 	def __init__(self, name):
+# 		super().__init__(name)
+# 		self.money = 50
+# 	def work(self):
+# 		self.money += 10
+# 		print(self.name, 'is working')
+# 		print('Money: ', self.money)
 
-class Animal:
-    def __init__(self, name):
-        self.name = name
-        self.cuteness = 10
-    def live(self):
-        print(self.name, 'is alive')
-    def sleep(self):
-        print('Sleeping time!')
-    def eat(self):
-        print("Eating time!")
-    def play(self):
-        print('Playing time!')
+# class Animal:
+#     def __init__(self, name):
+#         self.name = name
+#         self.cuteness = 10
+#     def live(self):
+#         print(self.name, 'is alive')
+#     def sleep(self):
+#         print('Sleeping time!')
+#     def eat(self):
+#         print("Eating time!")
+#     def play(self):
+#         print('Playing time!')
 
-class dog(Animal):
-	def live(self):
-		super().live()
-		print('What a wonderful day of a dog named', self.name)
-	def hunt(self):
-		print(self.name, 'is going for a hunt!')
-		self.cuteness -= 10
-		print('Cuteness: ', self.cuteness)
+# class dog(Animal):
+# 	def live(self):
+# 		super().live()
+# 		print('What a wonderful day of a dog named', self.name)
+# 	def hunt(self):
+# 		print(self.name, 'is going for a hunt!')
+# 		self.cuteness -= 10
+# 		print('Cuteness: ', self.cuteness)
 
-class cat(Animal):
-	def live(self):
-		super().live()
-		print('What a wonderful day of a cat named', self.name)
-	def playwithowner(self):
-		self.cuteness += 50
-		print(self.name, 'is playing with you!')
-		print('Cuteness: ', self.cuteness)
+# class cat(Animal):
+# 	def live(self):
+# 		super().live()
+# 		print('What a wonderful day of a cat named', self.name)
+# 	def playwithowner(self):
+# 		self.cuteness += 50
+# 		print(self.name, 'is playing with you!')
+# 		print('Cuteness: ', self.cuteness)
 
-class hamster(Animal):
-    def live(self):
-        super().live()
-        print('What a wonderful day of a hamster named', self.name)
-    def runinawheel(self):
-        self.cuteness += 25
-        print(self.name, 'is running in a wheel!')
-        print('Cuteness: ', self.cuteness)
+# class hamster(Animal):
+#     def live(self):
+#         super().live()
+#         print('What a wonderful day of a hamster named', self.name)
+#     def runinawheel(self):
+#         self.cuteness += 25
+#         print(self.name, 'is running in a wheel!')
+#         print('Cuteness: ', self.cuteness)
     
 
 
 
 
-human = Human('Bob')
-human.live()
-w1 = Woman('Clara')
-w1.live()
-w1.cook()
-m1 = Man('John')
-m1.live()
-m1.work()
-animal = Animal('Cute animal')
-animal.live()
-d1 = dog('Rudolf')
-d1.live()
-d1.hunt()
-c1 = cat('Cutie')
-c1.live()
-c1.playwithowner()
-h1 = hamster('Puhlya')
-h1.live()
-h1.runinawheel() 
+# human = Human('Bob')
+# human.live()
+# w1 = Woman('Clara')
+# w1.live()
+# w1.cook()
+# m1 = Man('John')
+# m1.live()
+# m1.work()
+# animal = Animal('Cute animal')
+# animal.live()
+# d1 = dog('Rudolf')
+# d1.live()
+# d1.hunt()
+# c1 = cat('Cutie')
+# c1.live()
+# c1.playwithowner()
+# h1 = hamster('Puhlya')
+# h1.live()
+# h1.runinawheel() 
+
+
+
+from random import *
+class Cat:
+    def __init__(self, name):
+        self.name = name
+        self.cuteness = 50
+        self.progress = 0
+        self.alive = True
+    def say_meow(self):
+        print('Meow')
+    def to_hunt(self):
+        print('Time to hunt!')
+        self.progress += 5
+        self.cuteness -= 15
+    def to_sleep(self):
+        print('Sleep time!')
+        self.progress += 5
+        self.cuteness += 10
+    def to_play(self):
+        print('Playtime!')
+        self.cuteness += 20
+        self.progress -= 5
+    def to_donothing(self):
+        print('Time to chill!')
+        self.progress -= 10
+        self.cuteness += 5
+    def is_alive(self):
+        if self.progress < -10:
+            print('You are bad cat!')
+            self.alive = False
+        elif self.progress > 50:
+            print('The most successful cat on the west!')
+            self.alive = True
+        elif self.cuteness < 20:
+            print('Not a cute cat!')
+            self.alive = False
+        elif self.cuteness > 100:
+            print('Cutest cat on the west!')
+    def statistics(self):
+            print(' Progress = ', self.progress, 'Cuteness =', self.cuteness)
+    def live(self, day):
+        day = 'Day ' + str(day) + ' of ' + self.name + ' life'
+        print(day)
+        live_cube = randint(1,5)
+        if live_cube == 1:
+            self.say_meow()
+        elif live_cube == 2:
+            self.to_hunt()
+        elif live_cube == 3:
+            self.to_sleep()
+        elif live_cube == 4:
+            self.to_play()
+        elif live_cube == 5:
+            self.to_donothing()
+        self.statistics()
+        self.is_alive()
+
+cat = Cat('Cute cat')
+for day in range(30):
+	if cat.alive == False:
+		break
+	cat.live(day)
+
