@@ -1,3 +1,153 @@
+# Повторение
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# def angry(func):
+# 	def wrapper():
+# 		func()
+# 		print('he is angry')
+# 	return wrapper
+# def happy(func):
+#     def wrapper():
+#         func()
+#         print('he is happy')
+#     return wrapper
+# def sad(func):
+#     def wrapper():
+#         func()
+#         print('he is sad')
+#     return wrapper
+# def depressed(func):
+#     def wrapper():
+#         func()
+#         print('he is depressed')
+#     return wrapper
+# def unemployed(func):
+#     def wrapper():
+#         func()
+#         print('he is unemployed')
+#     return wrapper
+# def stoopid(func):
+#     def wrapper():
+#         func()
+#         print('he is stoopid')
+#     return wrapper
+# def lost(func):
+#     def wrapper():
+#         func()
+#         print('he is lost')
+#     return wrapper
+# def talkative(func):
+#     def wrapper():
+#         func()
+#         print('he is talkative')
+#     return wrapper
+# def smart(func):
+#     def wrapper():
+#         func()
+#         print('he is smart')
+#     return wrapper
+# def unlucky(func):
+#     def wrapper():
+#         func()
+#         print('he is unlucky')
+#     return wrapper
+# def strong(func):
+#     def wrapper():
+#         func()
+#         print('he is strong')
+#     return wrapper
+    
+# @happy
+# @angry
+# @sad
+# @depressed
+# @unemployed
+# @stoopid
+# @lost
+# @smart
+# @talkative
+# @unlucky
+# @strong
+
+
+
+
+
+# def human():
+# 	print('this is human')
+
+# human()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# import math
+# num1 = num2 = sign = ''
+# while num1 == '' or num2 == '' or sign == '':
+# 	try:
+# 		num1 = int(input('Number1: '))
+# 		sign = input('Sign: ')
+# 		num2 = int(input('Number2: '))
+# 		if num2 == 0 and sign == '/':
+# 			raise ZeroDivisionError
+# 		if num2 <= 0 and sign == '^':
+# 			raise ArithmeticError	
+# 	except ValueError:
+# 		print('Wrong value')
+# 	except ZeroDivisionError:
+# 		sign = ''
+# 		print("You can't divide by zero")      
+# 	except:
+# 		print('Something is wrong!')
+# 	if sign == '+':
+# 		print(f"{num1} + {num2} = {num1+num2}")
+# 	if sign == '-':
+# 		print(f"{num1} - {num2} = {num1-num2}")
+# 	if sign == '*':
+# 		print(f"{num1} * {num2} = {num1*num2}")
+# 	if sign == '/':
+# 		print(f"{num1} / {num2} = {num1/num2}")
+# 	if sign == '^':
+# 		print(f"{num1} ^ {num2} = {num1**num2}") 
+
+
+
+
 # from random import *
 
 # class University:
@@ -216,65 +366,65 @@
 
 
 
-from random import *
-class Cat:
-    def __init__(self, name):
-        self.name = name
-        self.cuteness = 50
-        self.progress = 0
-        self.alive = True
-    def say_meow(self):
-        print('Meow')
-    def to_hunt(self):
-        print('Time to hunt!')
-        self.progress += 5
-        self.cuteness -= 15
-    def to_sleep(self):
-        print('Sleep time!')
-        self.progress += 5
-        self.cuteness += 10
-    def to_play(self):
-        print('Playtime!')
-        self.cuteness += 20
-        self.progress -= 5
-    def to_donothing(self):
-        print('Time to chill!')
-        self.progress -= 10
-        self.cuteness += 5
-    def is_alive(self):
-        if self.progress < -10:
-            print('You are bad cat!')
-            self.alive = False
-        elif self.progress > 50:
-            print('The most successful cat on the west!')
-            self.alive = True
-        elif self.cuteness < 20:
-            print('Not a cute cat!')
-            self.alive = False
-        elif self.cuteness > 100:
-            print('Cutest cat on the west!')
-    def statistics(self):
-            print(' Progress = ', self.progress, 'Cuteness =', self.cuteness)
-    def live(self, day):
-        day = 'Day ' + str(day) + ' of ' + self.name + ' life'
-        print(day)
-        live_cube = randint(1,5)
-        if live_cube == 1:
-            self.say_meow()
-        elif live_cube == 2:
-            self.to_hunt()
-        elif live_cube == 3:
-            self.to_sleep()
-        elif live_cube == 4:
-            self.to_play()
-        elif live_cube == 5:
-            self.to_donothing()
-        self.statistics()
-        self.is_alive()
+# from random import *
+# class Cat:
+#     def __init__(self, name):
+#         self.name = name
+#         self.cuteness = 50
+#         self.progress = 0
+#         self.alive = True
+#     def say_meow(self):
+#         print('Meow')
+#     def to_hunt(self):
+#         print('Time to hunt!')
+#         self.progress += 5
+#         self.cuteness -= 15
+#     def to_sleep(self):
+#         print('Sleep time!')
+#         self.progress += 5
+#         self.cuteness += 10
+#     def to_play(self):
+#         print('Playtime!')
+#         self.cuteness += 20
+#         self.progress -= 5
+#     def to_donothing(self):
+#         print('Time to chill!')
+#         self.progress -= 10
+#         self.cuteness += 5
+#     def is_alive(self):
+#         if self.progress < -10:
+#             print('You are bad cat!')
+#             self.alive = False
+#         elif self.progress > 50:
+#             print('The most successful cat on the west!')
+#             self.alive = True
+#         elif self.cuteness < 20:
+#             print('Not a cute cat!')
+#             self.alive = False
+#         elif self.cuteness > 100:
+#             print('Cutest cat on the west!')
+#     def statistics(self):
+#             print(' Progress = ', self.progress, 'Cuteness =', self.cuteness)
+#     def live(self, day):
+#         day = 'Day ' + str(day) + ' of ' + self.name + ' life'
+#         print(day)
+#         live_cube = randint(1,5)
+#         if live_cube == 1:
+#             self.say_meow()
+#         elif live_cube == 2:
+#             self.to_hunt()
+#         elif live_cube == 3:
+#             self.to_sleep()
+#         elif live_cube == 4:
+#             self.to_play()
+#         elif live_cube == 5:
+#             self.to_donothing()
+#         self.statistics()
+#         self.is_alive()
 
-cat = Cat('Cute cat')
-for day in range(30):
-	if cat.alive == False:
-		break
-	cat.live(day)
+# cat = Cat('Cute cat')
+# for day in range(30):
+# 	if cat.alive == False:
+# 		break
+# 	cat.live(day)
 
