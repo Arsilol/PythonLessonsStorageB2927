@@ -1,5 +1,62 @@
 # Повторение
 
+# class Flower:
+# 	def __init__(self):
+# 		self.color = 'None'
+# 		self.name = 'None'
+# 		self.height = 0
+# 	def sun(self):
+# 		print('I like sun')
+# 	def water(self):
+# 		print('I want water')
+
+# class Rose(Flower):
+# 	def __init__(self):
+# 		super().__init__()
+# 		self.spikes = True
+# 	def sun(self):
+# 		super().sun()
+# 		print('I want sun')
+# 	def gift(self):
+# 		print('I am gift')
+
+# obj = Flower()
+# obj.sun()
+# obj.water()
+
+# rose = Rose()
+# rose.sun()
+# rose.water()
+# rose.gift()
+
+
+# class Book:
+# 	def __init__(self):
+# 		self.pages = 0
+# 		self.title = 'None'
+# 		self.author = 'None'
+# 	def read(self):
+# 		print(f'Book {self.title} is being read')
+# 	def add_info(self):
+# 		try:
+# 			self.title = input('Input title: ')
+# 			self.author = input('Input author: ')
+# 			self.pages = int(input('Input pages: '))
+# 			if self.author.isalpha() == False:
+# 				raise NameError
+# 			if self.pages <= 0:
+# 				raise ValueError
+# 		except NameError:
+# 			print('Wrong names')
+# 		except ValueError:
+# 			print('Not correct pages')
+# 		except:
+# 			print('Error')
+
+# obj1 = Book()
+# obj1.read()
+# obj1.add_info()
+# obj1.read()
 
 
 
@@ -116,34 +173,34 @@
 
 
 
-# import math
-# num1 = num2 = sign = ''
-# while num1 == '' or num2 == '' or sign == '':
-# 	try:
-# 		num1 = int(input('Number1: '))
-# 		sign = input('Sign: ')
-# 		num2 = int(input('Number2: '))
-# 		if num2 == 0 and sign == '/':
-# 			raise ZeroDivisionError
-# 		if num2 <= 0 and sign == '^':
-# 			raise ArithmeticError	
-# 	except ValueError:
-# 		print('Wrong value')
-# 	except ZeroDivisionError:
-# 		sign = ''
-# 		print("You can't divide by zero")      
-# 	except:
-# 		print('Something is wrong!')
-# 	if sign == '+':
-# 		print(f"{num1} + {num2} = {num1+num2}")
-# 	if sign == '-':
-# 		print(f"{num1} - {num2} = {num1-num2}")
-# 	if sign == '*':
-# 		print(f"{num1} * {num2} = {num1*num2}")
-# 	if sign == '/':
-# 		print(f"{num1} / {num2} = {num1/num2}")
-# 	if sign == '^':
-# 		print(f"{num1} ^ {num2} = {num1**num2}") 
+import math
+num1 = num2 = sign = ''
+while num1 == '' or num2 == '' or sign == '':
+	try:
+		num1 = int(input('Number1: '))
+		sign = input('Sign: ')
+		num2 = int(input('Number2: '))
+		if num2 == 0 and sign == '/':
+			raise ZeroDivisionError
+		if num2 <= 0 and sign == '^':
+			raise ArithmeticError	
+	except ValueError:
+		print('Wrong value')
+	except ZeroDivisionError:
+		sign = ''
+		print("You can't divide by zero")      
+	except:
+		print('Something is wrong!')
+	if sign == '+':
+		print(f"{num1} + {num2} = {num1+num2}")
+	if sign == '-':
+		print(f"{num1} - {num2} = {num1-num2}")
+	if sign == '*':
+		print(f"{num1} * {num2} = {num1*num2}")
+	if sign == '/':
+		print(f"{num1} / {num2} = {num1/num2}")
+	if sign == '^':
+		print(f"{num1} ^ {num2} = {num1**num2}") 
 
 
 
